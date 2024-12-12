@@ -1,0 +1,243 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GuitarLyricsChords</title>
+<!-- Link To Css -->
+<!-- Box Icons -->
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+
+<<style>
+  *{
+  margin: 0;
+padding: 0;
+box-sizing: border-box;
+scroll-padding-top: 2rem;
+text-decoration: none;
+list-style: none;
+scroll-behavior: smooth;
+font-family: "Poppins", sans-serif;
+}
+
+:root{
+  --main-color: #216C27;
+  --second-color: #1C211C;
+}
+
+.section{
+  padding: 50px 10%;
+
+}
+
+*::selection{
+  color: #FFFFFF;
+  background: var(--main-color);
+}
+
+img{
+  width: 100%;
+}
+
+
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFFFFF;
+  box-shadow: 0 4px 40px rgb(14 55 54 / 14%);
+  padding: 15px 10%;
+  transition: 0.2s;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  color: var(--main-color); 
+  text-shadow: 1px 1px #B5B5B5;
+  background-color: transparent;
+  border: 2px;
+  box-shadow: 0 2px 4px #000000;
+  border-radius: 40px;
+  width: 40px;
+  height: 40px;
+  font-weight: 600;
+  padding: 5px; 
+  text-align: center;
+}
+
+.logo img{
+  width: 40px;
+}
+
+.navbar{
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.navbar #btn {
+  display: inline-block;
+  background: transparent;
+  color: #000000;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.navbar #btn:hover {
+  background-color: var(--main-color);
+}
+
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  display: none; /* Initially hidden */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* Ensure it covers everything */
+}
+
+/* Loading content */
+.loading-container {
+  text-align: center;
+  color: white;
+}
+
+/* Spinner design */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid transparent;
+  border-top-color: #00ffcc;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 10px;
+}
+
+/* Loading text */
+.loading-container p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Spinner animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1150px){
+  header{
+    padding: 18px 7%;
+  }
+  section{
+    padding: 50px 7%;
+  }
+  
+}
+
+
+@media (max-width: 991px){
+  header{
+    padding: 18px 4%;
+  }
+  section{
+    padding: 50px 4%;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 11px 4%;
+  }
+
+
+
+}
+
+@media (max-width: 768px) {
+
+
+
+  
+
+
+}
+</style>
+</head>
+
+
+
+<body>
+
+<header>
+  <a href="#home" class="logo">WilaN<br>GuitaR</a>
+  <a href="#home" class="">Guitar<br>Chords</a>
+  <ul class="navbar">
+
+  <button class="bx bx-home" id="btn" onclick="redirectWithLoading('index.html')"></button>
+  </ul>
+  
+          <div id="loading-screen">
+            <div class="loading-container">
+              <div class="spinner"></div>
+              <p>Loading... Please wait</p>
+            </div>
+          </div>
+  
+</header>
+
+
+
+
+
+
+<script>
+  function redirectWithLoading(url) {
+  const loadingScreen = document.getElementById('loading-screen');
+  
+  // Show the loading screen
+  loadingScreen.style.display = 'flex';
+  
+  // Delay redirection for 2 seconds
+  setTimeout(() => {
+    window.location.href = url;
+  }, 800); // 2 seconds delay
+}
+
+
+
+</script>
+
+</body>
+</html>

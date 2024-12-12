@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GuitarLyricsChords</title>
+<!-- Link To Css -->
+<link rel="stylesheet" href="songs.css">
+<!-- Box Icons -->
+<link rel="stylesheet" 
+href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+
+</head>
+
+
+
+<body>
+
+<header>
+  <a href="#home" class="logo">WilaN<br>GuitaR</a>
+  <a href="#home" class="">Lyrics<br>Chords<br>Songs</a>
+  <ul class="navbar">
+
+  <button class="bx bx-home" id="btn" onclick="redirectWithLoading('index.html')"></button>
+  </ul>
+  
+          <div id="loading-screen">
+            <div class="loading-container">
+              <div class="spinner"></div>
+              <p>Loading... Please wait</p>
+            </div>
+          </div>
+  
+</header>
+
+
+<div class="container">
+  <div class="sidebar">
+    <div class="sidehead">
+
+    
+    <hr style="margin: 15px 0; border: 1px solid whitesmoke">
+    </div>
+    
+    <div class="sidebody" style="height: 69vh;">
+      <div class="searchbar">
+        <input placeholder="search..." id="searchBar" name="searchbar" type="text">
+        <i class="bx bx-search glass"></i>
+      </div>
+    </div>
+    
+
+      
+
+      </div>
+      
+      
+          <div class="data">
+      <div class="top">
+        <p>+908473939</p>
+        <p>kentwilanfegarido@gmail.com</p>
+      </div>
+            <div class="header">
+              <p>Choose Your Song to Play</p>
+            </div>
+      
+            <div class="body">
+              <div id="root">
+      
+              </div>
+    </div>
+
+      
+    </div>
+    
+
+
+    
+
+
+<script>
+  function redirectWithLoading(url) {
+  const loadingScreen = document.getElementById('loading-screen');
+  
+  // Show the loading screen
+  loadingScreen.style.display = 'flex';
+  
+  // Delay redirection for 2 seconds
+  setTimeout(() => {
+    window.location.href = url;
+  }, 800); // 2 seconds delay
+}
+
+
+
+</script>
+
+<script src="songs.js">songs.js</script>
+
+</body>
+</html>
