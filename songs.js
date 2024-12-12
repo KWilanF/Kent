@@ -4,7 +4,12 @@ const product = [
   { id: 2, image: 'logo.png', title: 'nobela', Artist: 'Join The Club' },
   { id: 3, image: 'logo.png', title: 'alapaap', Artist: 'Eraserheads' },
   { id: 4, image: 'logo.png', title: 'ligaya', Artist: 'Eraserheads' },
-  { id: 5, image: 'logo.png', title: 'all or nothing', Artist: 'O-Town' }
+  { id: 5, image: 'logo.png', title: 'all or nothing', Artist: 'O-Town' },
+   {id: 6, image: 'logo.png', title: 'pansamantala', Artist: 'Callalily' },
+   {id: 7, image: 'logo.png', title: 'pasenysa ka na', Artist: 'Silent Sanctuary' },
+   {id: 8, image: 'logo.png', title: 'kundiman', Artist: 'Silent Sanctuary' },
+   {id: 9, image: 'logo.png', title: 'kahit kailan', Artist: 'SouthBorder' },
+   {id: 10, image: 'logo.png', title: '14', Artist: 'Silent Sanctuary' }
 ];
 
 const categories = product; // No need to use Set since the array already contains unique objects.
