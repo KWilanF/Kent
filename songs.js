@@ -46,3 +46,7 @@ const displayItem = (items) => {
 
 // Display initial content
 displayItem(categories);
+
+
+
+

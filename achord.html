@@ -1,0 +1,505 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GuitarLyricsChords</title>
+<!-- Link To Css -->
+<!-- Box Icons -->
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+
+<<style>
+  *{
+  margin: 0;
+padding: 0;
+box-sizing: border-box;
+scroll-padding-top: 2rem;
+text-decoration: none;
+list-style: none;
+scroll-behavior: smooth;
+font-family: "Poppins", sans-serif;
+}
+
+:root{
+  --main-color: #216C27;
+  --second-color: #1C211C;
+}
+
+.section{
+  padding: 50px 10%;
+
+}
+
+*::selection{
+  color: #FFFFFF;
+  background: var(--main-color);
+}
+
+img{
+  width: 100%;
+}
+
+
+header{
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFFFFF;
+  box-shadow: 0 4px 40px rgb(14 55 54 / 14%);
+  padding: 15px 10%;
+  transition: 0.2s;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  color: var(--main-color); 
+  text-shadow: 1px 1px #B5B5B5;
+  background-color: transparent;
+  border: 2px;
+  box-shadow: 0 2px 4px #000000;
+  border-radius: 40px;
+  width: 40px;
+  height: 40px;
+  font-weight: 600;
+  padding: 5px; 
+  text-align: center;
+}
+
+.logo img{
+  width: 40px;
+}
+
+.navbar{
+  display: flex;
+}
+
+.navbar a{
+  font-size: 1rem;
+  padding: 11px 20px;
+  color: var(--second-color);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.navbar a:hover{
+  color: var(--main-color);
+}
+
+#menu-icon{
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1001;
+  display: none;
+}
+
+
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  display: none; /* Initially hidden */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* Ensure it covers everything */
+}
+
+/* Loading content */
+.loading-container {
+  text-align: center;
+  color: white;
+}
+
+/* Spinner design */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid transparent;
+  border-top-color: #00ffcc;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 10px;
+}
+
+/* Loading text */
+.loading-container p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Spinner animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid #000000;
+}
+
+.footer .info {
+  width: 100%;
+  height: 10vh;
+  border-top: 50ox;
+  display: flex;
+  align-items: flex-end;
+}
+
+.info h6 {
+  margin-top: 50px;
+}
+
+.social a {
+  font-size: 27px;
+  margin: 0.5rem;
+}
+
+.social a .bx {
+  padding: 5px;
+  color: #FFFFFF;
+  background: #000000;
+  border-radius: 50%;
+}
+
+.social a .bx:hover {
+  background: var(--main-color);
+}
+
+.heading{
+  text-align: center;
+  margin-left: -60px;
+}
+
+.heading span{
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--second-color);
+}
+
+.heading h1{
+  font-size: 2rem;
+  color: var(--main-color);
+}
+
+.box {
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.box .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--main-color);
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.box .btn:hover {
+  background-color: var(--main-color);
+}
+
+.box .btn-view {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--main-color);
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #FFFFFF;
+
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.box .btn-view:hover {
+  background-color: var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1150px){
+  header{
+    padding: 18px 7%;
+  }
+  section{
+    padding: 50px 7%;
+  }
+  
+}
+
+
+@media (max-width: 991px){
+  header{
+    padding: 18px 4%;
+  }
+  section{
+    padding: 50px 4%;
+  }
+  
+}
+
+@media (max-width: 769px){
+    header {
+    padding: 11px 4%;
+  }
+
+#menu-icon{
+  display: initial;
+}
+
+header .navbar{
+  position: absolute;
+  top: -500px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  box-shadow: 0 4px 4px rgb(14 55 54 / 24%);
+  border-top: 2px solid var(--main-color);
+  transition: 0.2s;
+  text-align: left;
+}
+
+.navbar.active{
+  top: 100%;
+}
+
+.navbar a{
+  padding: 1.5rem;
+  display: block;
+  color: var(--second-color);
+}
+
+.home-text span{
+  font-size: 0.9rem;
+}
+
+.home-text h1{
+  font-size: 2.4rem;
+}
+
+.home-text h2{
+  font-size: 1.2rem;
+}
+
+}
+
+@media (max-width: 768px) {
+
+.major img{
+  width: 200px;
+  height: 200px;
+  margin-left: 60px;
+  z-index: 1;
+}
+
+.minor img {
+  width: 200px;
+  height: 200px;
+  margin-left: 60px;
+  z-index: 2;
+}
+
+.sidebar{
+  background: transparent;
+  height: 50%;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  margin-top: -550px;
+  margin-left: 320;
+  z-index: 3;
+  padding: 30px; 
+  border-radius: 5px; 
+  text-align: center;
+}
+
+.sidebar h1 {
+  margin-bottom: 20px; /* Space between the heading and the links */
+  font-size: 18px; /* Size of the heading text */
+  color: #333; /* Color for the heading */
+}
+
+.sidebar a {
+  display: block; /* Stack the links vertically */
+  text-decoration: none; /* Remove underline from links */
+  color: #fff; /* White text color for the links */
+  background-color: #216C27; /* Green background color */
+  padding: 10px 15px; /* Add padding to make it button-like */
+  border-radius: 5px; /* Rounded corners for the buttons */
+  margin-bottom: 10px; /* Add spacing between the buttons */
+  font-size: 16px; /* Text size for the links */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.sidebar a:hover {
+  background-color: #1A4F1D; /* Darker green on hover */
+}
+
+
+
+}
+</style>
+</head>
+
+
+
+<body>
+
+<header>
+  <a href="#home" class="logo">WilaN<br>GuitaR</a>
+  <div class="bx bx-menu" id="menu-icon"></div>
+  
+    <ul class="navbar">
+      <li><a href="index.html">home</a></li>
+      <li><a onclick="redirectWithLoading('presentsongs.html')">songs</a></li>
+      <li><a href="#favorite">favorite</a></li>
+  
+    </ul>
+          <div id="loading-screen">
+            <div class="loading-container">
+              <div class="spinner"></div>
+              <p>Loading... Please wait</p>
+            </div>
+          </div>
+  
+</header>
+
+
+<section class="chords" id="chords">
+  <div class="heading">
+    <h1>A<br> chord</h1>
+  </div>
+  
+  <div class="major">
+    <img src="A.jpg">
+  </div>
+  
+    <div class="heading">
+
+      <h1>Am <br> chord</h1>
+    </div>
+  
+  <div class="minor">
+    <img src="Am.jpg">
+  </div>
+  
+  <div class="sidebar">
+    <h1>Choose Chord Here</h1>
+    <a href="gchord.html">G</a>
+    <a href="echord.html">E</a>
+    <a href="dchord.html">D</a>
+    <a href="cchord.html">C</a>
+    <a href="fchord.html">F</a>
+    <a href="bchord.html">B</a>
+  </div>
+
+
+      
+    
+    
+</section>
+
+
+
+
+
+<section class="footer" id="footer">
+  <div class="social">
+    <a href=""><i class="bx bxl-facebook"></i></a>
+    <a href=""><i class="bx bxl-twitter"></i></a>
+    <a href=""><i class="bx bxl-instagram"></i></a>
+    <a href=""><i class="bx bxl-youtube"></i></a>
+    
+    <div class="info">
+      <h6>©All Rights Reserved • KentWilanFegarido @2024</h6>
+    </div>
+  </div>
+  
+</section>
+
+
+
+
+<script>
+
+let menu = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+
+menu.onclick = () => {
+  menu.classList.toggle('bx-x');
+  navbar.classList.toggle('active');
+};
+
+window.onscroll = () => {
+  menu.classList.remove('bx-x');
+  navbar.classList.remove('active');
+};
+
+// Hide navbar when clicking anywhere outside
+document.addEventListener('click', (event) => {
+  if (!menu.contains(event.target) && !navbar.contains(event.target)) {
+    menu.classList.remove('bx-x');
+    navbar.classList.remove('active');
+  }
+});
+
+
+
+
+
+  function redirectWithLoading(url) {
+  const loadingScreen = document.getElementById('loading-screen');
+  
+  // Show the loading screen
+  loadingScreen.style.display = 'flex';
+  
+  // Delay redirection for 2 seconds
+  setTimeout(() => {
+    window.location.href = url;
+  }, 800); // 2 seconds delay
+}
+
+
+
+</script>
+
+</body>
+</html>

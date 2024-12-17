@@ -61,12 +61,7 @@ header{
   text-align: center;
 }
 
-.search-input{
-  background: #FFFFFF;
-  width: 100%;
-  border-radius: 5px;
-  
-}
+
 
 .logo img{
   width: 40px;
@@ -336,7 +331,6 @@ header{
   background: transparent;
   width: 100%;
   height: 100%;
-  border: 1px solid #000000;
   text-align: center;
   text-transform: uppercase;
 }
@@ -344,6 +338,37 @@ header{
 .heading-about h1{
   font-size: 2rem;
   color: var(--main-color);
+}
+
+
+.head{
+
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head img{
+ 
+  width: 300px;
+  height: 300px;
+}
+
+.foot{
+  
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foot img{
+  
+  width: 300px;
+  height: 300px;
 }
 
 
@@ -471,6 +496,47 @@ header .navbar{
   .heading span{
     font-size: 0.9rem;
   }
+  
+  .head{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.head h1{
+  font-size: 13px;
+}
+
+.head img{
+  width: 300px;
+  height: 200px;
+}
+
+.foot{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: -16px;
+}
+
+.foot h1{
+  font-size: 12px;
+ 
+}
+
+.foot img{
+  width: 300px;
+  height: 200px;
+}
+
 
 
   

@@ -62,27 +62,28 @@ header{
 }
 
 .navbar{
-  text-align: center;
-  margin: 5px;
-  padding: 5px;
-  border: none;
-  border-radius: 5px;
+  display: flex;
 }
 
-.navbar #btn {
-  display: inline-block;
-  background: transparent;
-  color: #000000;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
+.navbar a{
+  font-size: 1rem;
+  padding: 11px 20px;
+  color: var(--second-color);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.navbar a:hover{
+  color: var(--main-color);
+}
+
+#menu-icon{
+  font-size: 30px;
   cursor: pointer;
-  font-size: 2rem;
+  z-index: 1001;
+  display: none;
 }
 
-.navbar #btn:hover {
-  background-color: var(--main-color);
-}
 
 #loading-screen {
   position: fixed;
@@ -143,7 +144,7 @@ header{
   border: 1px solid #FFFFFF;
   padding: 10px;
   height: 50vh;
-  box-shadow: 0px 0px 3px grey;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -336,16 +337,64 @@ display: none;
   
 }
 
+@media (max-width: 769px){
+    header {
+    padding: 11px 4%;
+  }
+
+#menu-icon{
+  display: initial;
+}
+
+header .navbar{
+  position: absolute;
+  top: -500px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  box-shadow: 0 4px 4px rgb(14 55 54 / 24%);
+  border-top: 2px solid var(--main-color);
+  transition: 0.2s;
+  text-align: left;
+}
+
+.navbar.active{
+  top: 100%;
+}
+
+.navbar a{
+  padding: 1.5rem;
+  display: block;
+  color: var(--second-color);
+}
+
+.home-text span{
+  font-size: 0.9rem;
+}
+
+.home-text h1{
+  font-size: 2.4rem;
+}
+
+.home-text h2{
+  font-size: 1.2rem;
+}
+
+}
+
 @media (max-width: 768px) {
+  
+  
   header {
     padding: 11px 4%;
   }
   
   .sidebar{
+  background: transparent;
   width: 100%;
-  border: 1px solid #FFFFFF;
   height: 15vh;
-  box-shadow: 0px 0px 3px grey;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -364,8 +413,6 @@ display: none;
 
 .data {
   justify-content: space-evenly;
-  border: 1px solid #FFFFFF;
-  box-shadow: 0px 0px 3px grey;
   width: 100%;
   height: 85vh;
   margin-top: 2px;
